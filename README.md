@@ -1,2 +1,3 @@
 # US-Temperature-Choropleth
-A choropleth of US temperature data
+
+# How to Run Shiny App
