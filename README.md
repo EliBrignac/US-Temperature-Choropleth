@@ -9,7 +9,7 @@ To run the app I made using shiny, run these lines of code in your favorite R co
 install.packages(c("ggplot2", "tidyr", "dplyr", "sp", "shiny", "maps", "plotly", "mapproj"))
 ```
 
-Once the packages are installed, you can run the following lines to run the shiny app. If it doesn't show up in the pop up window, click the button that says "open in browser" and it should show it.
+Once the packages are installed, you can run the following lines to run the shiny app. If it doesn't show up in the pop up window, click the button in the top left that says "Open in Browser" and it should show it.
 ```
 library(shiny) #import shiny library
 runGitHub("US-Temperature-Choropleth", "EliBrignac") #run my app
