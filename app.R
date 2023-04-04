@@ -1,5 +1,6 @@
 
 
+
 #pacman::p_load(pacman, dplyr, GGally, ggplot2, ggthemes,
 #                 ggvis, httr, lubridate, plotly, rio, rmarkdown, shiny,
 #                stringr, tidyr, maps, shinyjs)
@@ -10,6 +11,7 @@ library(dplyr)
 library(sp)
 library(shiny)
 library(maps)
+library(plotly)
 
 
 choose_year_month <- function(temp_data, year_, month_){
@@ -94,7 +96,7 @@ server <- function(input, output) {
     
   })
   
-  output$map <- renderPlot({
+  output$map <- renderPlotly({
     
     map_data <- data()
     map_data <- switch (input$unit,
