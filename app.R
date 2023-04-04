@@ -58,7 +58,7 @@ ui <- fluidPage(
                                "Farenheight" = "Far"))
     ),
     mainPanel(
-      plotOutput("map"),
+      plotlyOutput("map"),
       span("This is a map of the US temperature data. It currently maps the colors 
            relative to other parts of the US which is not ideal, but I do not feel 
            like fixing it right now. How I would fix this is by adding a new column
