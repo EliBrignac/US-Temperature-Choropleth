@@ -11,7 +11,6 @@ library(dplyr)
 library(sp)
 library(shiny)
 library(maps)
-library(plotly)
 
 
 choose_year_month <- function(temp_data, year_, month_){
@@ -60,7 +59,7 @@ ui <- fluidPage(
                                "Farenheight" = "Far"))
     ),
     mainPanel(
-      plotlyOutput("map"),
+      plotOutput("map"),
       span("This is a map of the US temperature data. It currently maps the colors 
            relative to other parts of the US which is not ideal, but I do not feel 
            like fixing it right now. How I would fix this is by adding a new column
@@ -96,7 +95,7 @@ server <- function(input, output) {
     
   })
   
-  output$map <- renderPlotly({
+  output$map <- renderPlot({
     
     map_data <- data()
     map_data <- switch (input$unit,
